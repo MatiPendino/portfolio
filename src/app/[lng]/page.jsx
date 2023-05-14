@@ -1,17 +1,20 @@
+'use client'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './styles/globals.css'
-import { Skill } from '../components/Skill'
-import { HeroTyped } from '../utils/HeroTyped'
-import { SocialMediaIcon } from '../components/SocialMediaIcon'
-import { Project } from '../components/Project'
+import '../styles/globals.css'
+import { Skill } from '../../components/Skill'
+import { HeroTyped } from '../../utils/HeroTyped'
+import { SocialMediaIcon } from '../../components/SocialMediaIcon'
+import { Project } from '../../components/Project'
+import { useTranslation } from '../i18n'
 
-export default function HomePage () {
+export default async function HomePage ({ params: {lng} }) {
+  const {t} = await useTranslation(lng)
   return (
     <main>
       <section className='hero' id='hero'>
         <div className='row hero__container'>
           <div className='col-12 col-lg-10'>
-            <h3>Hola! Soy</h3>
+            <h3>{t('presentation')}</h3>
             <h1>Matías Pendino</h1>
             <h3>Y soy <HeroTyped /></h3>
 

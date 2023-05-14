@@ -1,6 +1,13 @@
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import { Ubuntu, Karla, Nunito } from '@next/font/google'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import { Ubuntu, Karla, Nunito } from 'next/font/google'
+import { dir } from 'i18next'
+
+const languages = ['es', 'en']
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
 
 const ubuntu = Ubuntu({
   weight: ['300', '500', '400'],
@@ -23,9 +30,9 @@ export const metadata = {
   description: 'Portfolio created using Next.JS 13'
 }
 
-export default function RootLayout ({ children }) {
+export default function RootLayout ({ children, params: {lng} }) {
   return (
-    <html lang='en' className={`${nunito.variable} ${karla.variable} ${ubuntu.variable}`}>
+    <html lang={lng} dir={dir(lng)} className={`${nunito.variable} ${karla.variable} ${ubuntu.variable}`}>
       <head>
         <meta charSet='UTF-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
