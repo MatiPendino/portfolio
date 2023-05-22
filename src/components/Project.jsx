@@ -13,7 +13,7 @@ function getDemoButton ({ demoUrl }) {
     if (repoUrl) {
       return (
         <div className='col-6 col-4'>
-          <a href={repoUrl} className='button-portfolio button' target='_blank'>Demo</a>
+          <a href={repoUrl} className='button-portfolio button' target='_blank'>Repo</a>
         </div>
       )
     }

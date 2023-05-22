@@ -110,8 +110,13 @@ header nav {
   text-align: center;
 }
 
-#responsiveMenu ul li a {
+#responsiveMenu a,
+#responsiveMenu button {
   color: white!important;
+}
+
+#responsiveMenu button {
+  border: none;
 }
 
 @media(min-width: 768px) {

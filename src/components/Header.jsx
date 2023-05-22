@@ -1,10 +1,15 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { useTranslation } from '../app/i18n/client'
+import { useRouter } from 'next/navigation'
 
-export function Header () {
+export const Header = ({lng}) => {
+  const {t} = useTranslation(lng)
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap.min.js')
   }, [])
+
+  const router = useRouter()
 
   const [activeSection, setActiveSection] = useState('hero')
 
@@ -46,19 +51,25 @@ export function Header () {
         <div className='collapse navbar-collapse' id='responsiveMenu'>
           <ul className='navbar-nav mr-auto'>
             <li className='nav-item px-2'>
-              <a className={`${activeSection === 'hero' ? 'active' : ''} nav-link`} href='#hero'>Inicio</a>
+              <a className={`${activeSection === 'hero' ? 'active' : ''} nav-link`} href='#hero'>{t('index')}</a>
             </li>
             <li className='nav-item px-2'>
-              <a className={`${activeSection === 'about' ? 'active' : ''} nav-link`} href='#about'>Sobre mí</a>
+              <a className={`${activeSection === 'about' ? 'active' : ''} nav-link`} href='#about'>{t('about-me')}</a>
             </li>
             <li className='nav-item px-2'>
-              <a className={`${activeSection === 'skills' ? 'active' : ''} nav-link`} href='#skills'>Habilidades</a>
+              <a className={`${activeSection === 'skills' ? 'active' : ''} nav-link`} href='#skills'>{t('skills')}</a>
             </li>
             <li className='nav-item px-2'>
-              <a className={`${activeSection === 'experience' ? 'active' : ''} nav-link`} href='#experience'>Experiencia</a>
+              <a className={`${activeSection === 'experience' ? 'active' : ''} nav-link`} href='#experience'>{t('experience')}</a>
             </li>
             <li className='nav-item px-2'>
-              <a className={`${activeSection === 'portfolio' ? 'active' : ''} nav-link`} href='#portfolio'>Proyectos</a>
+              <a className={`${activeSection === 'portfolio' ? 'active' : ''} nav-link`} href='#portfolio'>{t('projects')}</a>
+            </li>
+            <li className='nav-item ps-2 pe-1'>
+              <button className='btn nav-link' onClick={() => router.push('/es')}>ES</button>
+            </li>
+            <li className='nav-item ps-1 pe-2'>
+              <button className='btn nav-link' onClick={() => router.push('/en')}>EN</button>
             </li>
           </ul>
         </div>

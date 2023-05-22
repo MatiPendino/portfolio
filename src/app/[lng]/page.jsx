@@ -1,4 +1,3 @@
-'use client'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
 import { Skill } from '../../components/Skill'
@@ -16,7 +15,7 @@ export default async function HomePage ({ params: {lng} }) {
           <div className='col-12 col-lg-10'>
             <h3>{t('presentation')}</h3>
             <h1>Matías Pendino</h1>
-            <h3>Y soy <HeroTyped /></h3>
+            <h3>{t('and-im')} <HeroTyped /></h3>
 
             <div className='hero__social-media'>
               <SocialMediaIcon link='https://www.linkedin.com/in/matias-pendino/' id='linkedin' iconClass='bi-linkedin' iconPath='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z' />
@@ -26,7 +25,7 @@ export default async function HomePage ({ params: {lng} }) {
             </div>
 
             <div className='mx-2 hero__cv'>
-              <a href='/files/Matías Pendino - Resume.pdf' download className='secondary-color button' id='download-cv'>Descargar CV</a>
+              <a href='/files/Matías Pendino - Resume.pdf' download className='secondary-color button' id='download-cv'>{t('download-resume')}</a>
             </div>
           </div>
         </div>
@@ -41,37 +40,37 @@ export default async function HomePage ({ params: {lng} }) {
           </div>
 
           <div className='about__container-text col-12 col-lg-6'>
-            <h2 className='mb-3'>Sobre mí</h2>
-            <p>Hola, mi nombre es Matías Pendino, tengo 21 años y soy de Rosario, Argentina.</p>
-            <p>Siempre me llamó la atención el software, por lo que en 2019 empecé a estudiar de manera autodidacta. Luego en 2020, me decidí a realizar la Tecnicatura Superior en Desarrollo de Software, la cual finalicé en diciembre del 2022. Además, en febrero del 2023 realicé el examen de inglés IELTS General Training, en el cual obtuve una calificación general de 7 (CEFR C1).</p>
-            <p>Actualmente me especializo en el desarrollo backend, utilizando principalmente Django, Django REST Framework y MySQL. También realizo proyectos móviles de manera freelance utilizando Flutter, y tiendas online usando WordPress.</p>
+            <h2 className='mb-3'>{t('about-me')}</h2>
+            <p>{t('about-me-p1')}</p>
+            <p>{t('about-me-p2')}</p>
+            <p>{t('about-me-p3')}</p>
           </div>
         </div>
       </section>
 
       <section className='skills' id='skills'>
-        <h3 className='text-center'>Habilidades</h3>
+        <h3 className='text-center'>{t('skills')}</h3>
 
         <div className='row col-12 col-lg-9 skills__container'>
-          <Skill languageName='Django' languageLevel='Muy bueno' languageIconPath='/img/logo-django-png.png' />
-          <Skill languageName='Python' languageLevel='Muy bueno' languageIconPath='/img/logo-python-png.png' />
-          <Skill languageName='Git' languageLevel='Bueno' languageIconPath='/img/logo-git-png.png' />
-          <Skill languageName='GitHub' languageLevel='Bueno' languageIconPath='/img/logo-github-png.png' />
-          <Skill languageName='MySQL' languageLevel='Bueno' languageIconPath='/img/logo-mysql-png.png' />
-          <Skill languageName='HTML 5' languageLevel='Bueno' languageIconPath='/img/logo-html5-png.png' />
-          <Skill languageName='Bootstrap' languageLevel='Bueno' languageIconPath='/img/logo-bootstrap-png.png' />
-          <Skill languageName='WordPress' languageLevel='Bueno' languageIconPath='/img/logo-wordpress-png.png' />
-          <Skill languageName='Flutter/Dart' languageLevel='Medio' languageIconPath='/img/logo-flutter-png.png' />
-          <Skill languageName='CSS' languageLevel='Medio' languageIconPath='/img/logo-css-png.png' />
-          <Skill languageName='Django REST' languageLevel='Medio' languageIconPath='/img/logo-drf-png.png' />
-          <Skill languageName='PHP' languageLevel='Medio' languageIconPath='/img/logo-php-png.png' />
-          <Skill languageName='JavaScript' languageLevel='Medio' languageIconPath='/img/logo-js-png.png' />
-          <Skill languageName='JQuery' languageLevel='Medio' languageIconPath='/img/logo-jquery-png.png' />
+          <Skill languageName='Django' languageLevel={t('very-good')} languageIconPath='/img/logo-django-png.png' lng={lng} />
+          <Skill languageName='Python' languageLevel={t('very-good')} languageIconPath='/img/logo-python-png.png' lng={lng} />
+          <Skill languageName='Git' languageLevel={t('good')} languageIconPath='/img/logo-git-png.png' lng={lng} />
+          <Skill languageName='GitHub' languageLevel={t('good')} languageIconPath='/img/logo-github-png.png' lng={lng} />
+          <Skill languageName='MySQL' languageLevel={t('good')} languageIconPath='/img/logo-mysql-png.png' lng={lng} />
+          <Skill languageName='HTML 5' languageLevel={t('good')} languageIconPath='/img/logo-html5-png.png' lng={lng} />
+          <Skill languageName='Bootstrap' languageLevel={t('good')} languageIconPath='/img/logo-bootstrap-png.png' lng={lng} />
+          <Skill languageName='WordPress' languageLevel={t('good')} languageIconPath='/img/logo-wordpress-png.png' lng={lng} />
+          <Skill languageName='Flutter/Dart' languageLevel={t('intermediate')} languageIconPath='/img/logo-flutter-png.png' lng={lng} />
+          <Skill languageName='CSS' languageLevel={t('intermediate')} languageIconPath='/img/logo-css-png.png' lng={lng} />
+          <Skill languageName='Django REST' languageLevel={t('intermediate')} languageIconPath='/img/logo-drf-png.png' lng={lng} />
+          <Skill languageName='PHP' languageLevel={t('intermediate')} languageIconPath='/img/logo-php-png.png' lng={lng} />
+          <Skill languageName='JavaScript' languageLevel={t('intermediate')} languageIconPath='/img/logo-js-png.png' lng={lng} />
+          <Skill languageName='JQuery' languageLevel={t('intermediate')} languageIconPath='/img/logo-jquery-png.png' lng={lng} />
         </div>
       </section>
 
       <section className='experience' id='experience'>
-        <h3 className='text-center mb-4'>Experiencia</h3>
+        <h3 className='text-center mb-4'>{t('experience')}</h3>
 
         <div className='experience__container justify-content-center'>
 
@@ -82,10 +81,7 @@ export default async function HomePage ({ params: {lng} }) {
                   <a className='nav-link experience-tab active' id='muchticket-tab' data-bs-toggle='tab' href='#muchticket' role='tab' aria-controls='muchticket' aria-selected='true'>MuchTicket</a>
                 </li>
                 <li className='col-6 col-lg-12 nav-item mb-4'>
-                  <a className='nav-link experience-tab' id='flutter-tab' data-bs-toggle='tab' href='#flutter' role='tab' aria-controls='flutter' aria-selected='false'>Flutter Freelance</a>
-                </li>
-                <li className='col-6 col-lg-12 nav-item mb-4'>
-                  <a className='nav-link experience-tab' id='wordpress-tab' data-bs-toggle='tab' href='#wordpress' role='tab' aria-controls='wordpress' aria-selected='false'>WordPress Freelance</a>
+                  <a className='nav-link experience-tab' id='freelance-tab' data-bs-toggle='tab' href='#freelance' role='tab' aria-controls='freelance' aria-selected='false'>Freelance</a>
                 </li>
                 <li className='col-6 col-lg-12 nav-item mb-4'>
                   <a className='nav-link experience-tab' id='litoral-tab' data-bs-toggle='tab' href='#litoral' role='tab' aria-controls='litoral' aria-selected='false'>Litoral Celulares</a>
@@ -98,41 +94,32 @@ export default async function HomePage ({ params: {lng} }) {
             <div className='tab-content' id='myTabContent'>
 
               <div className='tab-pane fade show active experience-card' id='muchticket' role='tabpanel' aria-labelledby='muchticket-tab'>
-                <h4>Desarrollador backend MuchTicket</h4>
-                <p>Junio 2022 - Actualidad</p>
+                <h4>{t('experience-muchticket')}</h4>
+                <p>{t('experience-muchticket-date')}</p>
                 <ul>
-                  <li className='mt-3'>Desarrollo de nuevas funcionalidades en el sistema.</li>
-                  <li className='mt-3'>Integración de diversos medios de pago como CyberSource, PayPal, SiemprePago, PlusPagos, entre otros.</li>
-                  <li className='mt-3'>Trabajo con una variedad de tecnologías, tales como Django, Django REST Framework, JQuery, HTML, CSS, JavaScript, Bootstrap, Git y GitHub.</li>
+                  <li className='mt-3'>{t('experience-muchticket-i1')}</li>
+                  <li className='mt-3'>{t('experience-muchticket-i2')}</li>
+                  <li className='mt-3'>{t('experience-muchticket-i3')}</li>
                 </ul>
               </div>
 
-              <div className='tab-pane fade show experience-card' id='flutter' role='tabpanel' aria-labelledby='flutter-tab'>
-                <h4>Desarrollador Mobile Freelance</h4>
-                <p>Marzo 2023 - Actualidad</p>
+              <div className='tab-pane fade show experience-card' id='freelance' role='tabpanel' aria-labelledby='freelance-tab'>
+                <h4>{t('experience-freelance')}</h4>
+                <p>{t('experience-freelance-date')}</p>
                 <ul>
-                  <li className='mt-3'>Creación de aplicaciones móviles desde cero.</li>
-                  <li className='mt-3'>Despliegue en Google Play Store.</li>
-                  <li className='mt-3'>Comunicación diaria con clientes.</li>
-                </ul>
-              </div>
-
-              <div className='tab-pane fade show experience-card' id='wordpress' role='tabpanel' aria-labelledby='wordpress-tab'>
-                <h4>Diseñador y Desarrollador WordPress Freelance</h4>
-                <p>Agosto 2020 - Actualidad</p>
-                <ul>
-                  <li className='mt-3'>Diseños y desarrollos de tiendas online, y sitios web personales y empresariales.</li>
-                  <li className='mt-3'>Utilización de diversas herramientas como Figma, Notion, Photoshop y Canva.</li>
-                  <li className='mt-3'>Comunicación diaria con clientes.</li>
+                  <li className='mt-3'>{t('experience-freelance-i1')}</li>
+                  <li className='mt-3'>{t('experience-freelance-i2')}</li>
+                  <li className='mt-3'>{t('experience-freelance-i3')}</li>
+                  <li className='mt-3'>{t('experience-freelance-i4')}</li>
                 </ul>
               </div>
 
               <div className='tab-pane fade show experience-card' id='litoral' role='tabpanel' aria-labelledby='litoral-tab'>
-                <h4>Gestión de stock Litoral Celulares</h4>
-                <p>Enero 2021 - Octubre 2021</p>
+                <h4>{t('experience-litoral')}</h4>
+                <p>{t('experience-litoral-date')}</p>
                 <ul>
-                  <li className='mt-3'>Control e ingresos de stock en el sitio.</li>
-                  <li className='mt-3'>Mejoras estéticas y optimizaciones al sitio web.</li>
+                  <li className='mt-3'>{t('experience-litoral-i1')}</li>
+                  <li className='mt-3'>{t('experience-litoral-i2')}</li>
                 </ul>
               </div>
             </div>
@@ -143,14 +130,15 @@ export default async function HomePage ({ params: {lng} }) {
       </section>
 
       <section className='portfolio pb-4' id='portfolio'>
-        <h3 className='text-center'>Algunos proyectos</h3>
+        <h3 className='text-center'>{t('some-projects')}</h3>
 
         <div className='portfolio__container row col-10 col-lg-10'>
-          <Project imagePath='/img/cocinasalud.png' projectId='cocinasalud' projectName='CocinaSalud' technologies='HTML, CSS, Bootstrap, Django, JavaScript y MySQL' demoUrl='https://cocinasalud.net' repoUrl='https://github.com/MatiPendino/cocina-salud' />
+          <Project imagePath='/img/cocinasalud.png' projectId='cocinasalud' projectName='CocinaSalud' technologies='HTML, CSS, Bootstrap, Django, JavaScript, MySQL' demoUrl='https://cocinasalud.net' repoUrl='https://github.com/MatiPendino/cocina-salud' />
           <Project imagePath='/img/league.png' projectId='league' projectName='CreateLeague' technologies='HTML, CSS, Bootstrap, Django, MySQL' repoUrl='https://github.com/MatiPendino/leagues-creator' />
           <Project imagePath='/img/bespoke.png' projectId='bespoke' projectName='BeSpoke' technologies='WordPress' demoUrl='https://arquitecturabespoke.ar' />
-          <Project imagePath='/img/votar-fms.png' projectId='fms' projectName='Votar FMS' technologies='Java, Android Studio, Firebase' demoUrl='https://play.google.com/store/apps/details?id=com.eddd.votarfms&hl=es_419' repoUrl='https://github.com/MatiPendino/VotarFMS' />
           <Project imagePath='/img/cmaccesorios.png' projectId='cmaccesorios' projectName='CMAccesorios' technologies='WordPress' demoUrl='https://cmaccesorios.com/' />
+          <Project imagePath='/img/peliculas.png' projectId='peliculas' projectName='Peliculas' technologies='Dart/Flutter' repoUrl='https://github.com/MatiPendino/peliculas' />
+          <Project imagePath='/img/votar-fms.png' projectId='fms' projectName='Votar FMS' technologies='Java, Android Studio, Firebase' demoUrl='https://play.google.com/store/apps/details?id=com.eddd.votarfms&hl=es_419' repoUrl='https://github.com/MatiPendino/VotarFMS' />
         </div>
       </section>
     </main>

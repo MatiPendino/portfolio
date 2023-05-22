@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import { Ubuntu, Karla, Nunito } from 'next/font/google'
+import { Ubuntu, Karla, Nunito } from '@next/font/google'
 import { dir } from 'i18next'
 
 const languages = ['es', 'en']
@@ -41,9 +41,9 @@ export default function RootLayout ({ children, params: {lng} }) {
         <title>Matías Pendino - Portfolio</title>
       </head>
       <body>
-        <Header />
+        <Header lng={lng} />
         {children}
-        <Footer />
+        <Footer lng={lng} />
       </body>
     </html>
   )

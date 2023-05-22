@@ -1,6 +1,9 @@
 'use client'
+import { useTranslation } from '../app/i18n/client'
 
-export function Footer () {
+
+export function Footer ({lng}) {
+  const {t} = useTranslation(lng)
   // Function scroll to top
   const scrollToTop = () => {
     window.scrollTo({
@@ -16,7 +19,7 @@ export function Footer () {
     <footer>
       <div className='footer__container row w-100 justify-content-between'>
         <div className='col-8 col-lg-5 footer__copyright'>
-          <span>Creado por Matías Pendino &copy; {currentYear}</span>
+          <span>{t('created-by')} Matías Pendino &copy; {currentYear}</span>
         </div>
         <div className='col-4 col-lg-2'>
           <button type='button' id='top-button' onClick={scrollToTop}>
