@@ -65,11 +65,11 @@ export const Header = ({lng}) => {
             <li className='nav-item px-2'>
               <a className={`${activeSection === 'portfolio' ? 'active' : ''} nav-link`} href='#portfolio'>{t('projects')}</a>
             </li>
-            <li className='nav-item ps-2 pe-1'>
-              <button className='btn nav-link' onClick={() => router.push('/es')}>ES</button>
+            <li className='nav-item px-1'>
+              <button className='btn nav-link w-100' onClick={() => router.push('/es')}>ES</button>
             </li>
-            <li className='nav-item ps-1 pe-2'>
-              <button className='btn nav-link' onClick={() => router.push('/en')}>EN</button>
+            <li className='nav-item px-1'>
+              <button className='btn nav-link w-100' onClick={() => router.push('/en')}>EN</button>
             </li>
           </ul>
         </div>
