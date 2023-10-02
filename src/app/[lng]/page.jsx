@@ -55,12 +55,12 @@ export default async function HomePage ({ params: {lng} }) {
           <Skill languageName='Django' languageLevel={t('very-good')} languageIconPath='/img/logo-django.png' lng={lng} />
           <Skill languageName='Python' languageLevel={t('very-good')} languageIconPath='/img/logo-python.png' lng={lng} />
           <Skill languageName='Django REST' languageLevel={t('good')} languageIconPath='/img/logo-drf.png' lng={lng} />
+          <Skill languageName='WordPress' languageLevel={t('good')} languageIconPath='/img/logo-wordpress.png' lng={lng} />
           <Skill languageName='Git' languageLevel={t('good')} languageIconPath='/img/logo-git.png' lng={lng} />
           <Skill languageName='GitHub' languageLevel={t('good')} languageIconPath='/img/logo-github.png' lng={lng} />
           <Skill languageName='MySQL' languageLevel={t('good')} languageIconPath='/img/logo-mysql.png' lng={lng} />
           <Skill languageName='HTML5' languageLevel={t('good')} languageIconPath='/img/logo-html5.png' lng={lng} />
           <Skill languageName='Bootstrap' languageLevel={t('good')} languageIconPath='/img/logo-bootstrap.png' lng={lng} />
-          <Skill languageName='WordPress' languageLevel={t('good')} languageIconPath='/img/logo-wordpress.png' lng={lng} />
           <Skill languageName='Flutter/Dart' languageLevel={t('intermediate')} languageIconPath='/img/logo-flutter.png' lng={lng} />
           <Skill languageName='CSS3' languageLevel={t('intermediate')} languageIconPath='/img/logo-css.png' lng={lng} />
           <Skill languageName='PHP' languageLevel={t('intermediate')} languageIconPath='/img/logo-php.png' lng={lng} />
@@ -82,10 +82,10 @@ export default async function HomePage ({ params: {lng} }) {
                   <a className='nav-link experience-tab active' id='muchticket-tab' data-bs-toggle='tab' href='#muchticket' role='tab' aria-controls='muchticket' aria-selected='true'>MuchTicket</a>
                 </li>
                 <li className='col-6 col-lg-12 nav-item mb-4'>
-                  <a className='nav-link experience-tab' id='freelance-tab' data-bs-toggle='tab' href='#freelance' role='tab' aria-controls='freelance' aria-selected='false'>Freelance</a>
+                  <a className='nav-link experience-tab' id='litoral-tab' data-bs-toggle='tab' href='#litoral' role='tab' aria-controls='litoral' aria-selected='false'>Litoral Celulares</a>
                 </li>
                 <li className='col-6 col-lg-12 nav-item mb-4'>
-                  <a className='nav-link experience-tab' id='litoral-tab' data-bs-toggle='tab' href='#litoral' role='tab' aria-controls='litoral' aria-selected='false'>Litoral Celulares</a>
+                  <a className='nav-link experience-tab' id='freelance-tab' data-bs-toggle='tab' href='#freelance' role='tab' aria-controls='freelance' aria-selected='false'>Freelance</a>
                 </li>
               </ul>
             </div>
@@ -104,6 +104,16 @@ export default async function HomePage ({ params: {lng} }) {
                 </ul>
               </div>
 
+              <div className='tab-pane fade show experience-card' id='litoral' role='tabpanel' aria-labelledby='litoral-tab'>
+                <h4>{t('experience-litoral')}</h4>
+                <p>{t('experience-litoral-date')}</p>
+                <ul>
+                  <li className='mt-3'>{t('experience-litoral-i1')}</li>
+                  <li className='mt-3'>{t('experience-litoral-i2')}</li>
+                  <li className='mt-3'>{t('experience-litoral-i3')}</li>
+                </ul>
+              </div>
+
               <div className='tab-pane fade show experience-card' id='freelance' role='tabpanel' aria-labelledby='freelance-tab'>
                 <h4>{t('experience-freelance')}</h4>
                 <p>{t('experience-freelance-date')}</p>
@@ -112,15 +122,6 @@ export default async function HomePage ({ params: {lng} }) {
                   <li className='mt-3'>{t('experience-freelance-i2')}</li>
                   <li className='mt-3'>{t('experience-freelance-i3')}</li>
                   <li className='mt-3'>{t('experience-freelance-i4')}</li>
-                </ul>
-              </div>
-
-              <div className='tab-pane fade show experience-card' id='litoral' role='tabpanel' aria-labelledby='litoral-tab'>
-                <h4>{t('experience-litoral')}</h4>
-                <p>{t('experience-litoral-date')}</p>
-                <ul>
-                  <li className='mt-3'>{t('experience-litoral-i1')}</li>
-                  <li className='mt-3'>{t('experience-litoral-i2')}</li>
                 </ul>
               </div>
             </div>
