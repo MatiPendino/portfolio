@@ -1,6 +1,7 @@
+import { Ubuntu, Karla, Nunito } from '@next/font/google'
+import {Analytics} from '@vercel/analytics/react'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import { Ubuntu, Karla, Nunito } from '@next/font/google'
 import { dir } from 'i18next'
 
 const languages = ['es', 'en']
@@ -43,6 +44,7 @@ export default function RootLayout ({ children, params: {lng} }) {
       <body>
         <Header lng={lng} />
         {children}
+        <Analytics />
         <Footer lng={lng} />
       </body>
     </html>

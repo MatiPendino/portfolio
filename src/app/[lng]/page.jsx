@@ -35,7 +35,7 @@ export default async function HomePage ({ params: {lng} }) {
         <div className='row about__container'>
           <div className='col-12 col-lg-6'>
             <div className='about__container-image' id='image-about-container'>
-              <img src='/img/hero_img.HEIC' id='image-about' alt='About image' />
+              <img src='/img/hero.jpg' id='image-about' alt='Hero image' />
             </div>
           </div>
 
@@ -58,14 +58,15 @@ export default async function HomePage ({ params: {lng} }) {
           <Skill languageName='WordPress' languageLevel={t('good')} languageIconPath='/img/logo-wordpress.png' lng={lng} />
           <Skill languageName='Git' languageLevel={t('good')} languageIconPath='/img/logo-git.png' lng={lng} />
           <Skill languageName='GitHub' languageLevel={t('good')} languageIconPath='/img/logo-github.png' lng={lng} />
+          <Skill languageName='React' languageLevel={t('good')} languageIconPath='/img/logo-react.png' />
+          <Skill languageName='JavaScript' languageLevel={t('good')} languageIconPath='/img/logo-js.png' lng={lng} />
           <Skill languageName='MySQL' languageLevel={t('good')} languageIconPath='/img/logo-mysql.png' lng={lng} />
           <Skill languageName='HTML5' languageLevel={t('good')} languageIconPath='/img/logo-html5.png' lng={lng} />
           <Skill languageName='Bootstrap' languageLevel={t('good')} languageIconPath='/img/logo-bootstrap.png' lng={lng} />
           <Skill languageName='Flutter/Dart' languageLevel={t('intermediate')} languageIconPath='/img/logo-flutter.png' lng={lng} />
+          <Skill languageName='Next' languageLevel={t('intermediate')} languageIconPath='/img/logo-next.png' lng={lng} />
           <Skill languageName='CSS3' languageLevel={t('intermediate')} languageIconPath='/img/logo-css.png' lng={lng} />
           <Skill languageName='PHP' languageLevel={t('intermediate')} languageIconPath='/img/logo-php.png' lng={lng} />
-          <Skill languageName='JavaScript' languageLevel={t('intermediate')} languageIconPath='/img/logo-js.png' lng={lng} />
-          <Skill languageName='React' languageLevel={t('intermediate')} languageIconPath='/img/logo-react.png' />
           <Skill languageName='JQuery' languageLevel={t('intermediate')} languageIconPath='/img/logo-jquery.png' lng={lng} />
         </div>
       </section>
@@ -136,7 +137,6 @@ export default async function HomePage ({ params: {lng} }) {
 
         <div className='portfolio__container row col-10 col-lg-10'>
           <Project imagePath='/img/cocinasalud.png' projectId='cocinasalud' projectName='CocinaSalud' technologies='HTML, CSS, Bootstrap, Django, JavaScript, MySQL' demoUrl='https://cocinasalud.net' repoUrl='https://github.com/MatiPendino/cocina-salud' />
-          {/*<Project imagePath='/img/league.png' projectId='league' projectName='CreateLeague' technologies='HTML, CSS, Bootstrap, Django, MySQL' repoUrl='https://github.com/MatiPendino/leagues-creator' /> */}
           <Project imagePath='/img/bespoke.png' projectId='bespoke' projectName='BeSpoke' technologies='WordPress' demoUrl='https://arquitecturabespoke.ar' />
           <Project imagePath='/img/cmaccesorios.png' projectId='cmaccesorios' projectName='CMAccesorios' technologies='WordPress' demoUrl='https://cmaccesorios.com/' />
           <Project imagePath='/img/gifapp.png' projectId='giphy' projectName='GifApp' technologies='React' repoUrl='https://github.com/MatiPendino/gif-app' demoUrl="https://matipendino.github.io/gif-app/" />
