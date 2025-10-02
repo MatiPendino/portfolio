@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/hero/Hero';
 import { Footer } from './components/Footer';
@@ -67,6 +68,7 @@ function App() {
       ref={ref} 
       className='relative isolate font-nunito overflow-hidden bg-(--primary)' 
     >
+      <Analytics/>
       <Header />
       <Hero />
       <About />
