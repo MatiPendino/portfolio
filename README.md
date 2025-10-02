@@ -39,10 +39,10 @@ npm install
 npm run dev
 ```
 
-## 🌎 Internationalization
+## Internationalization
 
 The website supports both English and Spanish languages. Translations are managed through JSON files in the `public/locales` directory.
 
-## 📄 License
+## License
 
 This project is available for use under the Apache License 2.0.
